@@ -506,6 +506,55 @@ details.access{margin-top:12px;border-top:1px solid var(--border);padding-top:10
 .refl-table .optbar{max-width:220px}
 .results-tabs button .chip{font-size:10px;padding:1px 6px;margin-left:4px}
 
+/* Option A: UI/UX refresh (Nov 17 2026). Only option-a.js uses these classes. */
+.floatbar{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);z-index:5;width:min(920px,calc(100% - 32px));display:flex;align-items:center;gap:14px;padding:12px 16px;background:#E4E6F4;border-radius:14px;box-shadow:0 8px 24px rgba(0,0,0,.12)}
+.fb-ring{position:relative;display:grid;place-items:center;flex-shrink:0}.fb-ring b{position:absolute;font-size:11px}
+.fb-info{flex:1;min-width:0}.fb-info small{display:block;color:var(--muted-text);font-size:12px}.fb-info strong{font-size:14px}
+.fb-actions{display:flex;align-items:center;gap:14px}.fb-back{text-decoration:none}
+.opt-a .stepper{display:none}
+.modal-back{position:fixed;inset:0;z-index:20;background:rgba(15,18,30,.45);display:grid;place-items:center;padding:16px;overflow:auto}
+.modal{background:var(--card);border-radius:14px;padding:22px 24px;width:min(640px,100%);max-height:calc(100vh - 32px);overflow:auto;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.modal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}.modal-head h2{margin:0;font-size:20px}
+.modal .field-row{grid-template-columns:1fr 1fr}
+.label-row{display:flex;justify-content:space-between;align-items:baseline}.label-row .btn-link{font-size:12px}
+.modal-about{border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin:10px 0}
+.modal-path:empty{display:none}.modal-path .demo-switch{font-size:12px}
+.modal-actions{display:flex;justify-content:flex-end;align-items:center;gap:14px;margin-top:18px}.modal-actions.center{justify-content:center}
+.modal.success{width:min(440px,100%);text-align:center}.modal.success h2{margin:8px 0 4px}.modal.success .added-check{margin:0 auto}
+.create-menu{position:relative}.create-menu summary{list-style:none;cursor:pointer}.create-menu summary::-webkit-details-marker{display:none}
+.create-menu .menu{position:absolute;right:0;top:calc(100% + 6px);z-index:6;background:var(--card);border:1px solid var(--border);border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.12);padding:6px;min-width:190px}
+.create-menu .menu button{display:block;width:100%;text-align:left;padding:8px 10px;border:0;background:none;border-radius:6px;cursor:pointer;font:inherit;font-size:14px}.create-menu .menu button:hover{background:var(--secondary)}
+.ov-layout{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:20px;align-items:start;margin-bottom:16px}
+.wk{padding:14px}.wk-tools{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.wk-range{font-size:13px;font-weight:600;padding:6px 10px;border-radius:8px;background:var(--secondary)}
+.wk-view button{padding:4px 10px}
+.wk-grid{position:relative;display:grid;grid-template-columns:56px repeat(5,minmax(0,1fr));gap:0 6px;background:var(--secondary);border-radius:12px;padding:6px}
+.wk-dow{height:32px;display:grid;place-items:center;font-size:13px;font-weight:600;border-radius:8px;background:var(--card);margin-bottom:6px}.wk-dow.today{background:#D9DBE3}
+.wk-hours{display:flex;flex-direction:column}.wk-hours span{height:var(--row);font-size:11px;color:var(--muted-text);padding-top:2px}
+.wk-col{position:relative}.wk-slot{height:calc(var(--row) - 4px);margin-bottom:4px;background:var(--card);border-radius:6px}
+.wk-ev{position:absolute;left:3px;right:3px;min-height:calc(var(--row) - 6px);display:flex;flex-direction:column;align-items:flex-start;gap:1px;text-align:left;padding:6px 8px;border:0;border-radius:8px;cursor:pointer;font:inherit;font-size:12px;background:#ECEDF5;z-index:1}
+.wk-ev strong{font-size:12px;line-height:1.25}.wk-ev small{color:var(--muted-text);font-size:11px}
+.wk-ev-top{display:flex;justify-content:space-between;width:100%;font-size:11px;font-weight:600}
+.wk-ev.done{background:#E6F2EA}.wk-ev.done .wk-ev-top span:last-child{color:var(--success)}
+.wk-ev.review{background:#FBEBDD}.wk-ev.review .wk-ev-top span:last-child{color:var(--warning)}
+.wk-ev.sched{background:#E4E6F4}.wk-ev.live{background:var(--card);border:1px dashed var(--ring)}
+.wk-ev.mine{box-shadow:inset 3px 0 0 var(--foreground)}
+.wk-now{position:absolute;left:0;right:0;height:2px;background:#E2574C;z-index:2}.wk-now::before{content:"";position:absolute;left:-3px;top:-3px;width:8px;height:8px;border-radius:50%;background:#E2574C}
+.wk-now-label{position:absolute;left:8px;z-index:3;transform:translateY(-50%);background:#E2574C;color:#fff;font-size:10px;font-weight:700;padding:2px 6px;border-radius:8px}
+.wk-list-day{padding:8px 0;border-top:1px solid var(--border)}.wk-list-day h3{font-size:14px;margin:4px 0 8px}.wk-list-day.today h3::after{content:" · Today";color:var(--muted-text);font-weight:400}
+.wk-list-row{display:grid;grid-template-columns:70px minmax(0,1fr) 90px;gap:10px;align-items:center;margin:6px 0}.wk-list-row .wk-ev{position:static;min-height:0}
+.ov-side h2{font-size:20px;margin:6px 0 14px}
+.pq{padding:16px;margin-bottom:12px}.pq-head{display:flex;align-items:center;gap:10px;margin-bottom:12px}.pq-head strong{flex:1}
+.pq-icon{width:30px;height:30px;border-radius:8px;display:grid;place-items:center;background:var(--secondary);font-weight:700;flex-shrink:0}.pq-icon.warn{background:#FBEBDD;color:var(--warning)}.pq-icon.ok{background:var(--success-light);color:var(--success);border-radius:50%}
+.pq-stats{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:end;margin-bottom:12px}.pq-stats .big{font-size:24px;display:block}.pq-stats small{color:var(--muted-text)}
+.meter.amber div{background:#A0622D}
+.pq-pager{display:flex;align-items:center;gap:2px;flex:0 0 auto}.pq-pager small{white-space:nowrap;color:var(--muted-text)}
+.pq-draft{display:flex;justify-content:space-between;align-items:center;gap:12px}.pq-draft small{color:var(--muted-text);display:block}
+.segs{display:flex;gap:4px;margin:4px 0 6px}.segs i{width:22px;height:4px;border-radius:2px;background:var(--border)}.segs i.done,.segs i.cur{background:var(--foreground)}
+.pq.done{display:flex;align-items:center;gap:12px;background:var(--success-light)}.pq.done div{flex:1}.pq.done small{display:block;color:var(--muted-text)}
+.btn.full{width:100%}
+@media(max-width:900px){.ov-layout{grid-template-columns:1fr}.wk-grid{overflow-x:auto;grid-template-columns:48px repeat(5,minmax(96px,1fr))}}
+@media(max-width:640px){.floatbar{flex-wrap:wrap;bottom:10px}.fb-actions{width:100%;justify-content:flex-end}.modal .field-row{grid-template-columns:1fr}}
+
 </style>
 <style>
 /* Styles for prototype Options B and C, plus the option label shared by all three. */
@@ -1474,6 +1523,112 @@ ${open.length?`<div class="tools"><span class="small muted">Support tools</span>
 <div class="sq-foot"><button class="btn" ${q?'':'disabled'} onclick="setQ(${q-1})">← Previous</button><span class="small muted">Your answers save as you go</span>${q<state.items.length-1?`<button class="btn primary" onclick="setQ(${q+1})">Next →</button>`:'<button class="btn primary" onclick="toast(\'Prototype: answers are not submitted.\')">Review answers</button>'}</div></main>`}
 
 render();
+
+</script>
+<script>
+// Option A: follows the UI/UX team's Nov 17 2026 CAP refresh. Loads after cap-builder.js, before reflections.js; Options B and C don't load it.
+// New top nav and "learners" wording, a week-calendar Overview with a Today's priorities sidebar, setup in a pop-up,
+// a four-step create flow with a floating progress bar, and a success pop-up in place of the "ready" page.
+
+document.body.classList.add('opt-a');
+
+// Nav: Tests, Library, Item banks. Library and Classes aren't part of this prototype yet.
+topbar=function(active){const links=[['overview','Overview'],['assessments','Tests'],['library','Library'],['bank','Item banks'],['classes','Classes'],['results','Results']],live={overview:1,assessments:1,bank:1,results:1};
+return `<header class="topbar"><div class="brand"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-dasharray="40 11" transform="rotate(35 11 11)"/><circle cx="17.2" cy="6.4" r="2.3" fill="#FF554D"/></svg>Classroom Assessment<span class="chip option-badge" title="Prototype option">Option ${OPTION.id} · ${esc(OPTION.name)}</span></div>
+<nav class="topnav" aria-label="Main">${links.map(([k,l])=>`<button class="${k===active?'active':''}" onclick="${live[k]?`go('${k}')`:`toast('${l} is not part of this prototype.')`}">${l}</button>`).join('')}</nav><div class="top-right"><svg class="apps" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><rect x="1" y="1" width="6.5" height="6.5" rx="1.5"/><rect x="10.5" y="1" width="6.5" height="6.5" rx="1.5"/><rect x="1" y="10.5" width="6.5" height="6.5" rx="1.5"/><rect x="10.5" y="10.5" width="6.5" height="6.5" rx="1.5"/></svg><div class="avatar" aria-label="Sara L.">SL</div></div></header>`};
+
+// "Learners" in place of "students" on screen. Item stems, answer options and passages are content, so they stay as written.
+function contentText(){return [...Object.values(ELA.passages),...Object.values(state.passages||{})].map(p=>p.text||'').concat([...BANK,...state.items,state.draft].flatMap(it=>it?[it.stem,...(it.choices||[])]:[])).join('\n')}
+function toLearners(s){return s.replace(/\b([Ss])tudent(s?)\b/g,(m,S,pl)=>(S==='S'?'L':'l')+'earner'+pl)}
+function relabel(root){if(!root)return;const blob=contentText(),walk=document.createTreeWalker(root,NodeFilter.SHOW_TEXT),nodes=[];while(walk.nextNode())nodes.push(walk.currentNode);
+nodes.forEach(n=>{const t=n.nodeValue;if(!/student/i.test(t))return;const el=n.parentElement;if(el.closest('textarea,.passage,script,style'))return;if(t.trim().length>12&&blob.includes(t.trim()))return;n.nodeValue=toLearners(t)})}
+const baseRender=render;
+render=function(){baseRender();relabel(document.getElementById('app'));const t=TITLES[route()];if(t)document.title='Educator · '+toLearners(t)};
+const baseRefresh=refresh;
+refresh=function(){baseRefresh();relabel(document.getElementById('side-panel'))};
+const baseToast=toast;
+toast=function(msg){baseToast(toLearners(msg))};
+
+// Page heading: no stepper (the floating bar shows the step), and Save as draft at the top right.
+const A_TITLES={'Create your items':'Add your items','Select students and sessions':'Assign to learners and sessions'};
+pageHead=function(step,title,lede){return `<div class="page-head"><div><h1>${A_TITLES[title]||title}</h1>${lede?`<p class="lede">${lede}</p>`:''}</div><button class="btn" onclick="toast('Assessment draft saved in this browser.')">Save as draft</button></div>`};
+
+// Floating progress bar: 1/4 Create, 2/4 Review, 3/4 Assign, 4/4 Finalize.
+const A_STEPS={questions:[1,'Create'],review:[1,'Create'],details:[2,'Review'],assign:[3,'Assign'],confirm:[4,'Finalize'],scheduled:[4,'Finalize']};
+function ring(n){const c=2*Math.PI*15;return `<span class="fb-ring" aria-hidden="true"><svg width="38" height="38" viewBox="0 0 38 38"><circle cx="19" cy="19" r="15" fill="none" stroke="var(--border)" stroke-width="3"/><circle cx="19" cy="19" r="15" fill="none" stroke="var(--foreground)" stroke-width="3" stroke-linecap="round" stroke-dasharray="${c*n/4} ${c}" transform="rotate(-90 19 19)"/></svg><b>${n}/4</b></span>`}
+bottomBar=function(label,next,back,action){const [n,step]=A_STEPS[route()]||[1,'Create'],last=n===4;
+return `<div class="floatbar" role="region" aria-label="Progress: step ${n} of 4, ${step}">${ring(n)}<div class="fb-info"><small>${step}</small><div><strong>${esc(state.title)}</strong> ${draftChip()}</div></div>
+<div class="fb-actions">${back?`<button class="btn-link fb-back" onclick="go('${back}')">← Back</button>`:''}<button class="btn primary" onclick="${action||`go('${next}')`}">${last?'Create assessment':'Continue'}</button></div></div>`};
+
+// Setup is a pop-up over the page you started from.
+function closeSetup(){go('overview')}
+function setupModal(){const d=state.details,adv=!!state.setupMore,ab=!!state.setupAbout;
+return `<div class="modal-back" role="presentation"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="setup-h"><div class="modal-head"><h2 id="setup-h">Set up your test</h2><button class="icon-btn" aria-label="Close" onclick="closeSetup()">×</button></div>
+<label for="s-title">Assessment title</label><input id="s-title" value="${esc(state.title)}" onchange="state.title=this.value;save()">
+<div class="field-row"><div><label for="s-subject">Subject</label><select id="s-subject" onchange="setSetup('subject',this.value)">${opt('Mathematics','Mathematics',state.subject)}${opt(ELA.SUBJECT,ELA.SUBJECT,state.subject)}</select></div>
+<div><label for="s-grade">Grade level</label><select id="s-grade" onchange="setSetup('grade',this.value)">${['5','6','8'].map(g=>opt(g,'Grade '+g,state.grade)).join('')}</select></div>
+<div><label for="s-path">Test pathway</label><select id="s-path" onchange="setSetup('pathway',this.value)">${PATHWAYS.map(p=>p===AL_PATHWAY?`<option value="${p}" ${alabama()?'selected':''} ${state.contract===false?'disabled':''}>${KG.state} state standards — custom contract${state.contract===false?' (locked)':''}</option>`:opt(p,p,state.pathway||PATHWAYS[0])).join('')}</select></div>
+<div><div class="label-row"><label for="s-std">${alabama()?KG.state+' standard':'Standard'}</label><button class="btn-link small" aria-expanded="${ab}" onclick="state.setupAbout=${!ab};render()">About this standard</button></div><select id="s-std" onchange="setSetup('standard',this.value)">${writable().map(k=>opt(k,`${stdCode(k)} - ${stdLabel(k)}`,state.standard)).join('')}</select></div></div>
+${ab?`<div class="modal-about">${standardCard(state.standard)}</div>`:''}
+${isELASubject()?'<p class="hint">You’ll pick or write a passage, then write items about it. Your math test is saved and comes back if you switch.</p>':''}
+<div class="modal-path">${pathwayNote()}</div>
+<label class="check"><input type="checkbox" ${adv?'checked':''} onchange="state.setupMore=this.checked;render()"> Optional settings</label>
+${adv?`<div class="field-row">${selectRow('Duration','duration',['None','10 minutes','15 minutes','20 minutes','30 minutes','45 minutes'])}<div><label for="s-desc">Description</label><textarea id="s-desc" rows="2" onchange="state.details.description=this.value;save()" placeholder="Type here">${esc(d.description)}</textarea></div></div>`:''}
+<div class="modal-actions"><button class="btn-link" onclick="closeSetup()">Cancel</button><button class="btn primary" onclick="state.title=document.getElementById('s-title').value||state.title;go('questions')">Continue</button></div></div></div>`}
+// selectRow writes through setDetail, which re-renders; the pop-up stays open because the route is still "setup".
+ROUTES.setup=function(){return pageOverview()+setupModal()};
+TITLES.setup='Set up your test';
+
+// Create test menu: from scratch opens setup; the library isn't built yet.
+function createMenu(){return `<details class="create-menu"><summary class="btn primary">Create test <span aria-hidden="true">▾</span></summary><div class="menu" role="menu"><button role="menuitem" onclick="createAnother()">Create from scratch</button><button role="menuitem" onclick="toast('The assessment library is not part of this prototype.')">Use library</button></div></details>`}
+
+// Overview: a timed week calendar and a Today's priorities sidebar.
+const HOURS=[8,9,10,11,12,13,14,15],ROW=52;
+SAMPLE_SESSIONS.push([-1,'09:30','Algebra: Expressions','Grade 5A',6],[2,'10:00','Transformations Quiz','Grade 6A',22],[3,'13:30','Graphing Practice','Grade 7B',25]);
+function weekStart(){const d=dayOffset(0);d.setDate(d.getDate()-(d.getDay()+6)%7+7*(state.ovWeek||0));return d}
+function weekDates(){const s=weekStart();return [0,1,2,3,4].map(i=>{const d=new Date(s);d.setDate(s.getDate()+i);return d})}
+function evStatus(e){const today=isoDate(new Date()),now=new Date(),hm=`${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`;
+if(e.mine&&state.results&&state.results.responses)return ['review','Needs review','!'];
+if(e.date<today)return ['done','Completed','✓'];if(e.date===today&&e.time<=hm)return ['live','In progress','◌'];return ['sched','Scheduled','◷']}
+function openEvent(mine){mine?go('results'):toast('Sample session. It is not part of this prototype.')}
+function evCard(e,style){const [k,label,icon]=evStatus(e);return `<button class="wk-ev ${k} ${e.mine?'mine':''}" ${style?`style="${style}"`:''} onclick="openEvent(${!!e.mine})"><span class="wk-ev-top"><span>${label}</span><span aria-hidden="true">${icon}</span></span><strong>${esc(e.title)}</strong><small>${esc(e.cls)}</small></button>`}
+function weekCalendar(){const days=weekDates(),today=isoDate(new Date()),now=new Date(),nowH=now.getHours()+now.getMinutes()/60,range=`${days[0].toLocaleDateString('en-US',{month:'short',day:'numeric'})} – ${days[4].toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'})}`,list=state.ovView==='list';
+const top=t=>{const [h,m]=t.split(':').map(Number);return (h-HOURS[0]+m/60)*ROW};
+const head=`<div class="wk-tools"><div class="row-actions"><button class="icon-btn" aria-label="Previous week" onclick="state.ovWeek=(state.ovWeek||0)-1;render()">‹</button><span class="wk-range">📅 ${range}</span><button class="icon-btn" aria-label="Next week" onclick="state.ovWeek=(state.ovWeek||0)+1;render()">›</button>${state.ovWeek?'<button class="btn-link small" onclick="state.ovWeek=0;render()">This week</button>':''}</div>
+<div class="seg wk-view" role="group" aria-label="Calendar view"><button class="${list?'':'on'}" aria-pressed="${!list}" onclick="state.ovView='week';render()" aria-label="Week view">▦</button><button class="${list?'on':''}" aria-pressed="${list}" onclick="state.ovView='list';render()" aria-label="List view">☰</button></div></div>`;
+if(list)return `<section class="card wk">${head}${days.map(d=>{const ev=sessionsOn(isoDate(d));return `<div class="wk-list-day ${isoDate(d)===today?'today':''}"><h3>${d.toLocaleDateString('en-US',{weekday:'long',month:'short',day:'numeric'})}</h3>${ev.map(e=>`<div class="wk-list-row"><span class="day-time">${clock(e.time)}</span>${evCard(e)}<small class="muted">${plural(e.n,'student')}</small></div>`).join('')||'<p class="hint">No sessions.</p>'}</div>`}).join('')}</section>`;
+return `<section class="card wk">${head}<div class="wk-grid" style="--rows:${HOURS.length};--row:${ROW}px"><div class="wk-corner"></div>${days.map(d=>`<div class="wk-dow ${isoDate(d)===today?'today':''}">${d.toLocaleDateString('en-US',{weekday:'short'})} ${d.getDate()}</div>`).join('')}
+<div class="wk-hours">${HOURS.map(h=>`<span>${h%12||12} ${h<12?'AM':'PM'}</span>`).join('')}</div>
+${days.map(d=>{const iso=isoDate(d),ev=sessionsOn(iso).filter(e=>{const h=+e.time.slice(0,2);return h>=HOURS[0]&&h<=HOURS[HOURS.length-1]});
+return `<div class="wk-col">${HOURS.map(()=>'<div class="wk-slot"></div>').join('')}${iso===today&&nowH>=HOURS[0]&&nowH<HOURS[HOURS.length-1]+1?`<div class="wk-now" style="top:${(nowH-HOURS[0])*ROW}px"></div>`:''}${ev.map(e=>evCard(e,`top:${top(e.time)+3}px`)).join('')}</div>`}).join('')}
+${days.some(d=>isoDate(d)===today)&&nowH>=HOURS[0]&&nowH<HOURS[HOURS.length-1]+1?`<span class="wk-now-label" style="top:${(nowH-HOURS[0])*ROW+38}px">${clock(`${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`)}</span>`:''}</div></section>`}
+// Drafts: yours first, then samples. The next step follows how far the draft has got.
+function draftStep(){if(!state.items.length)return [1,'Add assessment items','questions'];if(!state.details.ack)return [2,'Review assessment details','details'];if(!selectedStudents().length||!state.assign.ack)return [3,'Assign learners and sessions','assign'];return [4,'Confirm and create','confirm']}
+function draftList(){return [...(state.assigned?[]:[{title:state.title,step:draftStep(),mine:true}]),{title:'Algebra basics',step:[1,'Add assessment items']},{title:'Properties of shapes',step:[2,'Review assessment details']},{title:'Reading comprehension 2',step:[3,'Assign learners and sessions']}]}
+function shiftDraft(n){const k=draftList().length;state.ovDraft=((state.ovDraft||0)+n+k)%k;render()}
+function prioritySide(){const r=state.results,drafts=draftList(),i=Math.min(state.ovDraft||0,drafts.length-1),dr=drafts[i],[n,next,to]=dr.step,mineDone=r&&r.responses;
+const queue=`<section class="card pq"><div class="pq-head"><span class="pq-icon warn" aria-hidden="true">!</span><strong>Marking queue</strong><span class="chip warning">Needs review</span></div>
+<div class="pq-stats"><div><strong class="big">${mineDone?3:2}</strong><small>assessments</small></div><div class="pq-progress"><small><strong>68%</strong> reviewed</small><div class="meter amber"><div style="width:68%"></div></div></div></div>
+<button class="btn primary full" onclick="${r?"go('results')":"toast('Sample marking queue. Assign your test to score it here.')"}">Open marking queue</button></section>`;
+const draft=`<section class="card pq"><div class="pq-head"><span class="pq-icon" aria-hidden="true">▤</span><strong>${esc(dr.title)}</strong><span class="pq-pager"><button class="icon-btn" aria-label="Previous draft" onclick="shiftDraft(-1)">‹</button><small>Draft ${i+1} of ${drafts.length}</small><button class="icon-btn" aria-label="Next draft" onclick="shiftDraft(1)">›</button></span></div>
+<div class="pq-draft"><div><small>Progress</small><div class="segs" role="img" aria-label="Step ${n} of 4">${[1,2,3,4].map(s=>`<i class="${s<n?'done':s===n?'cur':''}"></i>`).join('')}</div><strong class="small">${next}</strong></div><button class="btn" onclick="${dr.mine?`go('${to}')`:"toast('Sample draft. Create a test to start your own.')"}">Continue draft</button></div></section>`;
+const done=`<section class="card pq done"><span class="pq-icon ok" aria-hidden="true">✓</span><div><strong>${mineDone?esc(r.title):'Algebra: Expressions'}</strong><small>${mineDone?`${esc(classesOf(r.students))} | ${plural(r.students.length,'student')}`:'Grade 5A | 6 students'}</small></div><button class="btn-link" onclick="${mineDone?"go('results')":"toast('Sample results. Assign your test to see its results.')"}">View</button></section>`;
+return `<aside class="ov-side"><h2>Today’s priorities</h2>${queue}${draft}${done}</aside>`}
+function greeting(){const h=new Date().getHours();return h<12?'Good morning':h<17?'Good afternoon':'Good evening'}
+pageOverview=function(){return topbar('overview')+`<main class="page"><div class="page-head"><div><h1>${greeting()}</h1><p class="lede">Your assessment workspace for planning, assigning and tracking learner progress.</p></div>${createMenu()}</div>
+<div class="ov-layout">${weekCalendar()}${prioritySide()}</div>
+<p class="small muted">Concept prototype · Sample content and fictional students · Saved in this browser only · <button class="btn-link" onclick="resetDemo()">Reset prototype</button></p></main>`};
+ROUTES.overview=pageOverview;
+
+// Tests page: same content, new name and Create test menu.
+const baseAssessments=pageAssessments;
+pageAssessments=function(){return baseAssessments().replace('<span class="title-icon" aria-hidden="true">▢</span>Assessments</h1>','Tests</h1>').replace('Create new assessment<br>from scratch','Create new test<br>from scratch').replace('Use assessment<br>library','Use library')};
+ROUTES.assessments=pageAssessments;TITLES.assessments='Tests';TITLES.bank='Item banks';
+
+// Finish: a success pop-up over Review and confirm, in place of the "ready" page.
+function successModal(){const r=state.results;if(!r)return '';return `<div class="modal-back" role="presentation"><div class="modal success" role="dialog" aria-modal="true" aria-labelledby="done-h"><span class="added-check" aria-hidden="true">✓</span><h2 id="done-h">Assessment created</h2><p>${esc(r.title)} has been created for ${esc(classesOf(r.students))}.</p><p class="hint">This is a prototype, so nothing was sent to students.</p>
+<div class="modal-actions center"><button class="btn" onclick="createAnother()">Create another</button><button class="btn primary" onclick="go('assessments')">Go to assessments</button></div><button class="btn-link small" onclick="go('results')">View results →</button></div></div>`}
+ROUTES.scheduled=function(){return ROUTES.confirm()+successModal()};
 
 </script>
 <script>
