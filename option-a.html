@@ -555,6 +555,96 @@ details.access{margin-top:12px;border-top:1px solid var(--border);padding-top:10
 @media(max-width:900px){.ov-layout{grid-template-columns:1fr}.wk-grid{overflow-x:auto;grid-template-columns:48px repeat(5,minmax(96px,1fr))}}
 @media(max-width:640px){.floatbar{flex-wrap:wrap;bottom:10px}.fb-actions{width:100%;justify-content:flex-end}.modal .field-row{grid-template-columns:1fr}}
 
+/* Option A: Nov 18 2026 UI/UX update (setup settings, Test details step). */
+.set-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px 16px;margin:6px 0 10px}
+.set-field{margin:6px 0;border:0;padding:0;min-width:0}.set-field.full{grid-column:1/-1}
+.set-field legend,.set-label{display:block;font-size:13px;font-weight:600;margin:0 0 6px;padding:0}
+.radio-row{display:flex;flex-wrap:wrap;gap:6px 18px}.radio-row .radio{display:inline-flex;align-items:center;gap:6px;margin:0;font-weight:400;font-size:13px;cursor:pointer}
+.modal-optional{margin-top:4px}
+.opt-a .ov-side h2{font-size:16px;font-weight:600}
+.td-grid{display:grid;grid-template-columns:minmax(0,380px) minmax(0,380px);gap:16px;align-items:start;padding-bottom:110px}
+.td-tools{display:flex;gap:16px;margin:0 0 8px 6px}
+.td-card{background:var(--card);border:1px solid var(--card-border);border-radius:12px;overflow:hidden}
+.td-head{background:var(--foreground);color:var(--card);padding:12px 14px;font-weight:600}
+.td-body{padding:8px 14px 14px}
+.td-row{display:flex;justify-content:space-between;gap:16px;padding:7px 0;font-size:13px}.td-row span{color:var(--muted-text)}.td-row strong{text-align:right}
+.td-acc{margin-top:8px;border-radius:8px}.td-acc summary{cursor:pointer;background:var(--secondary);border-radius:8px;padding:9px 12px;font-size:13px;font-weight:600}
+.td-acc-body{padding:4px 2px}.td-acc-body .td-row{font-size:12px;padding:5px 0}
+.td-acc .tool-row{padding:6px 0}
+.td-review{margin-top:12px;font-size:13px}.td-review .row{margin-bottom:6px}
+.td-add{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-height:340px;margin-top:30px;background:none;border:1.5px dashed var(--border);border-radius:12px;color:var(--foreground);font-weight:600;cursor:pointer}
+.td-add span{font-size:24px;font-weight:400}
+.td-add:hover{background:var(--secondary)}
+@media(max-width:760px){.td-grid{grid-template-columns:1fr}.td-add{min-height:120px;margin-top:0}.set-grid{grid-template-columns:1fr}}
+
+/* Option A: all tabs (Nov 18 2026): Tests, Library, Item banks, Classes, Results, step 1 builder. */
+.card.flush{padding:0;overflow:hidden}
+.card.flush .table{margin:0}
+.avatar.sm{width:28px;height:28px;font-size:11px;flex:none;background:var(--tile);color:var(--tile-ink)}.avatar.sm.alt{background:var(--secondary);color:var(--foreground)}
+.tt-name{display:flex;align-items:center;gap:10px}.tt-name small{display:block;color:var(--muted-text);font-size:12px}.tt-name .row-title{font-weight:600;text-align:left}
+.tt-icon{color:var(--muted-text)}
+.tt-tools{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:4px 0 14px;flex-wrap:wrap}
+.tt-table tbody tr{cursor:pointer}.tt-table tbody tr:hover{background:var(--background)}.tt-table tr.mine{background:var(--info-light)}
+.danger-link{color:var(--destructive)}
+.count-badge{display:inline-grid;place-items:center;min-width:24px;height:24px;border-radius:999px;background:var(--secondary);font-size:12px;font-weight:600}
+.chip.dok1{background:var(--success-light);color:var(--success)}.chip.dok2{background:var(--warning-light);color:var(--warning)}.chip.dok3{background:#FDECEC;color:var(--destructive)}
+/* Library */
+.lib{display:grid;grid-template-columns:320px minmax(0,1fr);gap:24px;align-items:start;margin-top:24px}
+.lib-list{display:flex;flex-direction:column;gap:8px}.lib-list .pill-search{width:100%}
+.lib-row{display:flex;flex-direction:column;gap:2px;text-align:left;background:none;border:0;border-radius:10px;padding:10px 12px;cursor:pointer}
+.lib-row:hover{background:var(--secondary)}.lib-row.sel{background:var(--card);box-shadow:var(--shadow-sm)}.lib-row .row{display:flex;justify-content:space-between;align-items:center}
+.lib-detail .page-head{align-items:flex-start;margin-bottom:12px}.lib-title{font-size:24px;margin:0 0 6px}
+.lib-item{margin-bottom:12px}.lib-item .row{display:flex;justify-content:space-between}
+/* Item banks */
+.ib-title{font-size:24px;margin:24px 0 14px}
+/* Classes */
+.cls{display:grid;grid-template-columns:280px minmax(0,1fr);gap:24px;align-items:start}
+.cls-side{display:flex;flex-direction:column;gap:10px}
+.cls-card{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;width:100%;text-align:left;background:var(--card);border:1px solid var(--card-border);border-radius:12px;padding:12px 14px;cursor:pointer}
+.cls-card span small,.cls-card header small{display:block;font-size:11px;color:var(--muted-text)}.cls-card strong{display:block}
+.cls-card.on{flex-direction:column;padding:0;overflow:hidden;cursor:default}
+.cls-card.on header{display:flex;justify-content:space-between;align-items:flex-start;width:100%;background:var(--tile);color:var(--tile-ink);padding:12px 14px}.cls-card.on header small{color:var(--tile-ink)}
+.cls-body{padding:10px 14px 14px;width:100%}.cls-sub{font-weight:600;font-size:13px;margin-bottom:6px}
+.cls-line{display:flex;align-items:center;gap:6px;padding:5px 0;font-size:13px;flex-wrap:wrap}
+.cls-h{font-size:20px;padding:16px 16px 4px;margin:0}
+.cls-prog{display:flex;align-items:center;gap:8px}.cls-prog .rbar{flex:1;min-width:80px}.cls-note{padding:0 16px 14px}
+/* Results */
+.rs-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin:24px 0 16px;flex-wrap:wrap}.rs-head h1{margin:2px 0 0;font-size:28px}
+.rs-meta{display:flex;flex-direction:column;align-items:flex-end;gap:4px}
+.rs-layout{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:20px;align-items:start;margin-bottom:28px}
+.rs-count{padding:14px 16px 0;margin:0}
+.rs-side{display:flex;flex-direction:column;gap:12px}.rs-h{font-size:14px;margin:0 0 4px}
+.rs-acc{padding:0}.rs-acc summary{cursor:pointer;padding:14px 16px;font-weight:600;font-size:14px}.rs-acc .td-acc-body{padding:0 16px 14px}
+.rs-live .row{display:flex;justify-content:space-between;align-items:center;margin:8px 0}
+.rs-wait{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px;border-top:1px solid var(--border);background:var(--background)}
+/* Step 1 builder */
+.mode-pills{display:flex;gap:8px;flex-wrap:wrap;margin:4px 0 18px}.mode-pills .pill{border:1px solid var(--control-border);background:var(--card)}.mode-pills .pill.on{background:var(--foreground);color:#fff;border-color:var(--foreground)}
+.a1-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:start;padding-bottom:110px}
+.a1-fields{display:grid;grid-template-columns:1fr 1fr;gap:4px 16px}
+.num-step{display:flex;align-items:center;justify-content:space-between;background:var(--card);border:1px solid var(--control-border);border-radius:var(--radius);height:40px;padding:0 6px}
+.num-step button{border:0;background:none;font-size:18px;width:30px;height:30px;border-radius:6px;cursor:pointer}.num-step button:hover:not(:disabled){background:var(--secondary)}.num-step button:disabled{opacity:.35;cursor:default}
+.a1-box{background:var(--secondary);border-radius:12px;padding:12px 14px;margin:8px 0 14px}
+.a1-box>.row{display:flex;justify-content:space-between;align-items:center}.a1-box>.row label{margin:0}
+.a1-box textarea{background:var(--card);margin-bottom:6px}
+.a1-row{border-top:1px solid var(--control-border)}
+.a1-row summary{cursor:pointer;padding:10px 2px;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.a1-row summary::-webkit-details-marker{display:none}.a1-row summary::after{content:'›';font-size:18px;transition:transform .15s}.a1-row[open] summary::after{transform:rotate(90deg)}
+.a1-row summary>span{display:flex;flex-direction:column;gap:2px;flex:1}.a1-row summary small{color:var(--muted-text);font-size:12px}
+.a1-row summary .meter{display:block;height:5px;background:var(--control-border);border-radius:9px;margin-top:6px;overflow:hidden}.a1-row summary .meter span{display:block;height:100%;background:var(--foreground)}
+.a1-row-body{background:var(--card);border-radius:10px;padding:12px 14px;margin-bottom:10px}
+.a1-actions{display:flex;justify-content:flex-end;gap:16px;align-items:center;margin-top:12px}
+.a1-search{display:flex;gap:8px;margin-bottom:8px}.a1-search .pill-search{flex:1;min-width:0}.a1-search select{width:auto;margin:0}
+.a1-count{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.a1-bank,.a1-item{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--card-border);border-radius:12px;padding:12px 14px;margin-bottom:8px}
+.a1-bank>div,.a1-item>div:not(.a1-item-actions){flex:1;min-width:0}.a1-bank p,.a1-item p{margin:6px 0 0}
+.a1-item-actions{display:flex;gap:2px;flex:none}
+.a1-list>.row{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.a1-empty{display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px;background:var(--card);border:1px solid var(--card-border);border-radius:12px;padding:40px 24px;color:var(--muted-text)}.a1-empty strong{color:var(--foreground)}
+.a1-side{display:flex;flex-direction:column;gap:16px}
+@media(max-width:900px){.lib,.cls,.rs-layout,.a1-grid{grid-template-columns:1fr}.a1-fields{grid-template-columns:1fr}.rs-meta{align-items:flex-start}}
+.tt-tools .pills{margin:0;justify-content:flex-start}.tt-tools .pill-search{width:260px;max-width:100%}
+.a1-row-body #side-panel>.eyebrow:first-child{display:none}
+
 </style>
 <style>
 /* Styles for prototype Options B and C, plus the option label shared by all three. */
@@ -1526,14 +1616,14 @@ render();
 
 </script>
 <script>
-// Option A: follows the UI/UX team's Nov 17 2026 CAP refresh. Loads after cap-builder.js, before reflections.js; Options B and C don't load it.
+// Option A: follows the UI/UX team's CAP refresh (Nov 17 2026, updated Nov 18). Loads after cap-builder.js, before reflections.js; Options B and C don't load it.
 // New top nav and "learners" wording, a week-calendar Overview with a Today's priorities sidebar, setup in a pop-up,
 // a four-step create flow with a floating progress bar, and a success pop-up in place of the "ready" page.
 
 document.body.classList.add('opt-a');
 
 // Nav: Tests, Library, Item banks. Library and Classes aren't part of this prototype yet.
-topbar=function(active){const links=[['overview','Overview'],['assessments','Tests'],['library','Library'],['bank','Item banks'],['classes','Classes'],['results','Results']],live={overview:1,assessments:1,bank:1,results:1};
+topbar=function(active){const links=[['overview','Overview'],['assessments','Tests'],['library','Library'],['bank','Item banks'],['classes','Classes'],['results','Results']],live={overview:1,assessments:1,library:1,bank:1,classes:1,results:1};
 return `<header class="topbar"><div class="brand"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-dasharray="40 11" transform="rotate(35 11 11)"/><circle cx="17.2" cy="6.4" r="2.3" fill="#FF554D"/></svg>Classroom Assessment<span class="chip option-badge" title="Prototype option">Option ${OPTION.id} · ${esc(OPTION.name)}</span></div>
 <nav class="topnav" aria-label="Main">${links.map(([k,l])=>`<button class="${k===active?'active':''}" onclick="${live[k]?`go('${k}')`:`toast('${l} is not part of this prototype.')`}">${l}</button>`).join('')}</nav><div class="top-right"><svg class="apps" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><rect x="1" y="1" width="6.5" height="6.5" rx="1.5"/><rect x="10.5" y="1" width="6.5" height="6.5" rx="1.5"/><rect x="1" y="10.5" width="6.5" height="6.5" rx="1.5"/><rect x="10.5" y="10.5" width="6.5" height="6.5" rx="1.5"/></svg><div class="avatar" aria-label="Sara L.">SL</div></div></header>`};
 
@@ -1543,7 +1633,7 @@ function toLearners(s){return s.replace(/\b([Ss])tudent(s?)\b/g,(m,S,pl)=>(S==='
 function relabel(root){if(!root)return;const blob=contentText(),walk=document.createTreeWalker(root,NodeFilter.SHOW_TEXT),nodes=[];while(walk.nextNode())nodes.push(walk.currentNode);
 nodes.forEach(n=>{const t=n.nodeValue;if(!/student/i.test(t))return;const el=n.parentElement;if(el.closest('textarea,.passage,script,style'))return;if(t.trim().length>12&&blob.includes(t.trim()))return;n.nodeValue=toLearners(t)})}
 const baseRender=render;
-render=function(){baseRender();relabel(document.getElementById('app'));const t=TITLES[route()];if(t)document.title='Educator · '+toLearners(t)};
+render=function(){const m=document.querySelector('.modal'),mid=m&&m.getAttribute('aria-labelledby'),top=m?m.scrollTop:0;baseRender();const m2=document.querySelector('.modal');if(m2&&top&&m2.getAttribute('aria-labelledby')===mid)m2.scrollTop=top;relabel(document.getElementById('app'));const t=TITLES[route()];if(t)document.title='Educator · '+toLearners(t)};
 const baseRefresh=refresh;
 refresh=function(){baseRefresh();relabel(document.getElementById('side-panel'))};
 const baseToast=toast;
@@ -1561,10 +1651,20 @@ return `<div class="floatbar" role="region" aria-label="Progress: step ${n} of 4
 <div class="fb-actions">${back?`<button class="btn-link fb-back" onclick="go('${back}')">← Back</button>`:''}<button class="btn primary" onclick="${action||`go('${next}')`}">${last?'Create assessment':'Continue'}</button></div></div>`};
 
 // Setup is a pop-up over the page you started from.
-function closeSetup(){go('overview')}
+function closeSetup(){const back=state.setupReturn||'overview';state.setupReturn=null;go(back)}
+function finishSetup(){state.title=document.getElementById('s-title').value||state.title;state.testName=document.getElementById('s-test').value||testName();const back=state.setupReturn;state.setupReturn=null;go(back||'questions')}
+function editSetup(){state.setupReturn=route();go('setup')}
+function testName(){return state.testName==null?'Test 1':state.testName}
+// Settings as button groups (Nov 18 UI/UX update). Values keep the CAP wording so Review and confirm reads the same.
+const A_SETTINGS=[['Attempts','attempts',[['One attempt only','1'],['2 attempts','2'],['3 attempts','3']]],['Show results to learners','showResults',[['After submission'],['After all sessions close'],['Do not show']],'radio'],['Item order','questionOrder',[['As created'],['Shuffle']],'half'],['Answer option order','answerOrder',[['As created'],['Shuffle']],'half'],['Calculator allowed?','calculator',[['Allowed','Yes'],['Not allowed','No']],'half'],['Notes allowed?','notes',[['Allowed','Yes'],['Not allowed','No']],'half'],['Which calculator?','calcType',[['Basic'],['Scientific'],['Graphing']],'calc'],['Time limit','timeLimit',[['None','No limit'],['5 minutes','5 min'],['10 minutes','10 min'],['15 minutes','15 min'],['20 minutes','20 min']]]];
+function settingText(key){const d=state.details,v=d[key];if(key==='attempts')return v==='One attempt only'?'1':String(v).split(' ')[0];if(key==='calculator')return v==='Allowed'?'Yes, '+(d.calcType||'Basic'):'No';if(key==='notes')return v==='Allowed'?'Yes':'No';if(key==='timeLimit')return v==='None'?'No limit':v;return v}
+function settingsFields(){const d=state.details;return `<div class="set-grid">${A_SETTINGS.map(([label,key,choices,kind])=>{if(kind==='calc'&&d.calculator!=='Allowed')return '';const cur=key==='calcType'?(d.calcType||'Basic'):d[key],id='set-'+key;
+if(kind==='radio')return `<fieldset class="set-field full"><legend>${label}</legend><div class="radio-row">${choices.map(([v])=>`<label class="radio"><input type="radio" name="${id}" ${cur===v?'checked':''} onchange="setDetail('${key}','${v}')"> ${v}</label>`).join('')}</div></fieldset>`;
+return `<div class="set-field ${kind==='half'?'':'full'}"><span class="set-label" id="${id}">${label}</span><div class="seg" role="group" aria-labelledby="${id}">${choices.map(([v,l])=>`<button type="button" class="${cur===v?'on':''}" aria-pressed="${cur===v}" onclick="setDetail('${key}','${v}')">${l||v}</button>`).join('')}</div></div>`}).join('')}</div>`}
 function setupModal(){const d=state.details,adv=!!state.setupMore,ab=!!state.setupAbout;
-return `<div class="modal-back" role="presentation"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="setup-h"><div class="modal-head"><h2 id="setup-h">Set up your test</h2><button class="icon-btn" aria-label="Close" onclick="closeSetup()">×</button></div>
+return `<div class="modal-back" role="presentation"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="setup-h"><div class="modal-head"><h2 id="setup-h">${state.setupReturn?'Edit test setup':'Set up your assessment by creating a test'}</h2><button class="icon-btn" aria-label="Close" onclick="closeSetup()">×</button></div>
 <label for="s-title">Assessment title</label><input id="s-title" value="${esc(state.title)}" onchange="state.title=this.value;save()">
+<label for="s-test">Test name</label><input id="s-test" value="${esc(testName())}" onchange="state.testName=this.value;save()">
 <div class="field-row"><div><label for="s-subject">Subject</label><select id="s-subject" onchange="setSetup('subject',this.value)">${opt('Mathematics','Mathematics',state.subject)}${opt(ELA.SUBJECT,ELA.SUBJECT,state.subject)}</select></div>
 <div><label for="s-grade">Grade level</label><select id="s-grade" onchange="setSetup('grade',this.value)">${['5','6','8'].map(g=>opt(g,'Grade '+g,state.grade)).join('')}</select></div>
 <div><label for="s-path">Test pathway</label><select id="s-path" onchange="setSetup('pathway',this.value)">${PATHWAYS.map(p=>p===AL_PATHWAY?`<option value="${p}" ${alabama()?'selected':''} ${state.contract===false?'disabled':''}>${KG.state} state standards — custom contract${state.contract===false?' (locked)':''}</option>`:opt(p,p,state.pathway||PATHWAYS[0])).join('')}</select></div>
@@ -1572,15 +1672,19 @@ return `<div class="modal-back" role="presentation"><div class="modal" role="dia
 ${ab?`<div class="modal-about">${standardCard(state.standard)}</div>`:''}
 ${isELASubject()?'<p class="hint">You’ll pick or write a passage, then write items about it. Your math test is saved and comes back if you switch.</p>':''}
 <div class="modal-path">${pathwayNote()}</div>
+${settingsFields()}
 <label class="check"><input type="checkbox" ${adv?'checked':''} onchange="state.setupMore=this.checked;render()"> Optional settings</label>
-${adv?`<div class="field-row">${selectRow('Duration','duration',['None','10 minutes','15 minutes','20 minutes','30 minutes','45 minutes'])}<div><label for="s-desc">Description</label><textarea id="s-desc" rows="2" onchange="state.details.description=this.value;save()" placeholder="Type here">${esc(d.description)}</textarea></div></div>`:''}
-<div class="modal-actions"><button class="btn-link" onclick="closeSetup()">Cancel</button><button class="btn primary" onclick="state.title=document.getElementById('s-title').value||state.title;go('questions')">Continue</button></div></div></div>`}
+${adv?`<div class="modal-optional">${selectRow('Duration','duration',['None','10 minutes','15 minutes','20 minutes','30 minutes','45 minutes'])}<label for="s-desc">Description</label><textarea id="s-desc" rows="2" onchange="state.details.description=this.value;save()" placeholder="Type here">${esc(d.description)}</textarea>
+<label for="s-link">Resource link</label><input id="s-link" type="url" value="${esc(d.resourceLink||'')}" placeholder="https://..." onchange="state.details.resourceLink=this.value;save()">
+<label for="s-notes">Additional notes</label><textarea id="s-notes" rows="2" onchange="state.details.extraNotes=this.value;save()" placeholder="Type here">${esc(d.extraNotes||'')}</textarea>
+<label for="s-instr">Learner directions</label><textarea id="s-instr" rows="2" onchange="state.details.instructions=this.value;save()" placeholder="Type here">${esc(d.instructions)}</textarea></div>`:''}
+<div class="modal-actions"><button class="btn-link" onclick="closeSetup()">Cancel</button><button class="btn primary" onclick="finishSetup()">${state.setupReturn?'Save':'Continue'}</button></div></div></div>`}
 // selectRow writes through setDetail, which re-renders; the pop-up stays open because the route is still "setup".
-ROUTES.setup=function(){return pageOverview()+setupModal()};
-TITLES.setup='Set up your test';
+ROUTES.setup=function(){const bg=state.setupReturn&&ROUTES[state.setupReturn];return (bg?bg():pageOverview())+setupModal()};
+TITLES.setup='Set up your assessment';
 
 // Create test menu: from scratch opens setup; the library isn't built yet.
-function createMenu(){return `<details class="create-menu"><summary class="btn primary">Create test <span aria-hidden="true">▾</span></summary><div class="menu" role="menu"><button role="menuitem" onclick="createAnother()">Create from scratch</button><button role="menuitem" onclick="toast('The assessment library is not part of this prototype.')">Use library</button></div></details>`}
+function createMenu(){return `<details class="create-menu"><summary class="btn primary">Create assessment <span aria-hidden="true">▾</span></summary><div class="menu" role="menu"><button role="menuitem" onclick="createAnother()">Create from scratch</button><button role="menuitem" onclick="go('library')">Use library</button></div></details>`}
 
 // Overview: a timed week calendar and a Today's priorities sidebar.
 const HOURS=[8,9,10,11,12,13,14,15],ROW=52;
@@ -1603,7 +1707,7 @@ ${days.map(d=>{const iso=isoDate(d),ev=sessionsOn(iso).filter(e=>{const h=+e.tim
 return `<div class="wk-col">${HOURS.map(()=>'<div class="wk-slot"></div>').join('')}${iso===today&&nowH>=HOURS[0]&&nowH<HOURS[HOURS.length-1]+1?`<div class="wk-now" style="top:${(nowH-HOURS[0])*ROW}px"></div>`:''}${ev.map(e=>evCard(e,`top:${top(e.time)+3}px`)).join('')}</div>`}).join('')}
 ${days.some(d=>isoDate(d)===today)&&nowH>=HOURS[0]&&nowH<HOURS[HOURS.length-1]+1?`<span class="wk-now-label" style="top:${(nowH-HOURS[0])*ROW+38}px">${clock(`${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`)}</span>`:''}</div></section>`}
 // Drafts: yours first, then samples. The next step follows how far the draft has got.
-function draftStep(){if(!state.items.length)return [1,'Add assessment items','questions'];if(!state.details.ack)return [2,'Review assessment details','details'];if(!selectedStudents().length||!state.assign.ack)return [3,'Assign learners and sessions','assign'];return [4,'Confirm and create','confirm']}
+function draftStep(){if(!state.items.length)return [1,'Add assessment items','questions'];if(!state.details.seen)return [2,'Review test details','details'];if(!selectedStudents().length||!state.assign.ack)return [3,'Assign learners and sessions','assign'];return [4,'Confirm and create','confirm']}
 function draftList(){return [...(state.assigned?[]:[{title:state.title,step:draftStep(),mine:true}]),{title:'Algebra basics',step:[1,'Add assessment items']},{title:'Properties of shapes',step:[2,'Review assessment details']},{title:'Reading comprehension 2',step:[3,'Assign learners and sessions']}]}
 function shiftDraft(n){const k=draftList().length;state.ovDraft=((state.ovDraft||0)+n+k)%k;render()}
 function prioritySide(){const r=state.results,drafts=draftList(),i=Math.min(state.ovDraft||0,drafts.length-1),dr=drafts[i],[n,next,to]=dr.step,mineDone=r&&r.responses;
@@ -1620,15 +1724,148 @@ pageOverview=function(){return topbar('overview')+`<main class="page"><div class
 <p class="small muted">Concept prototype · Sample content and fictional students · Saved in this browser only · <button class="btn-link" onclick="resetDemo()">Reset prototype</button></p></main>`};
 ROUTES.overview=pageOverview;
 
-// Tests page: same content, new name and Create test menu.
-const baseAssessments=pageAssessments;
-pageAssessments=function(){return baseAssessments().replace('<span class="title-icon" aria-hidden="true">▢</span>Assessments</h1>','Tests</h1>').replace('Create new assessment<br>from scratch','Create new test<br>from scratch').replace('Use assessment<br>library','Use library')};
 ROUTES.assessments=pageAssessments;TITLES.assessments='Tests';TITLES.bank='Item banks';
 
 // Finish: a success pop-up over Review and confirm, in place of the "ready" page.
 function successModal(){const r=state.results;if(!r)return '';return `<div class="modal-back" role="presentation"><div class="modal success" role="dialog" aria-modal="true" aria-labelledby="done-h"><span class="added-check" aria-hidden="true">✓</span><h2 id="done-h">Assessment created</h2><p>${esc(r.title)} has been created for ${esc(classesOf(r.students))}.</p><p class="hint">This is a prototype, so nothing was sent to students.</p>
 <div class="modal-actions center"><button class="btn" onclick="createAnother()">Create another</button><button class="btn primary" onclick="go('assessments')">Go to assessments</button></div><button class="btn-link small" onclick="go('results')">View results →</button></div></div>`}
 ROUTES.scheduled=function(){return ROUTES.confirm()+successModal()};
+
+// Step 2 of 4, Test details (Nov 18 UI/UX update): a read-only test card with Edit and Learner preview,
+// Settings and Optional settings accordions, and an Add another test tile. The review check moves to step 4.
+function tdRow(k,v){return `<div class="td-row"><span>${k}</span><strong>${v}</strong></div>`}
+function tdAcc(key,title,body){const open=(state.tdOpen||{})[key];return `<details class="td-acc" ${open?'open':''} ontoggle="(state.tdOpen=state.tdOpen||{})['${key}']=this.open;save()"><summary>${title}</summary><div class="td-acc-body">${body}</div></details>`}
+pageDetails=function(){if(!state.items.length)return emptyAssessment(0);const d=state.details;d.seen=true;const r=rollup(),t=totals(),n=state.items.length,ready=n-r.flagged.length,stds=[...new Set(state.items.map(it=>stdCode(it.standard)))].join(', '),dash='<span class="muted">Not set</span>';
+const settings=A_SETTINGS.filter(([,k])=>k!=='calcType').map(([label,key])=>tdRow(label,esc(settingText(key)))).join('');
+const optional=tdRow('Duration',esc(d.duration))+tdRow('Description',d.description?esc(d.description):dash)+tdRow('Resource link',d.resourceLink?esc(d.resourceLink):dash)+tdRow('Additional notes',d.extraNotes?esc(d.extraNotes):dash)+tdRow('Learner directions',d.instructions?esc(d.instructions):dash);
+const tools=`<p class="hint">Optional tools every learner can turn on. Supports for specific learners are set in the Assign step.</p>${OPEN_TOOLS.map(k=>`<div class="tool-row"><div><strong>${SUPPORTS[k].name}</strong></div><label class="switch"><input type="checkbox" aria-label="${SUPPORTS[k].name} available to all students" ${d.tools[k]?'checked':''} onchange="toggleTool('${k}')"><span>${d.tools[k]?'Available to all':'Off'}</span></label></div>`).join('')}`;
+return topbar('assessments')+`<main class="page"><div class="page-head"><div><h1>Test details</h1></div><div class="row-actions"><button class="btn-link" onclick="toast('Bank for reuse saves this test for later. It is not part of this prototype.')">Bank for reuse</button><button class="btn" onclick="toast('Assessment draft saved in this browser.')">Save as draft</button></div></div>
+<div class="td-grid"><div><div class="td-tools"><button class="btn-link small" onclick="editSetup()">✎ Edit</button><button class="btn-link small" onclick="previewAsStudent()">◉ Learner preview</button></div>
+<section class="td-card"><header class="td-head">${esc(testName())}</header><div class="td-body">
+${tdRow('Subject',esc(state.subject))}${tdRow('Grade level','Grade '+esc(state.grade))}${tdRow('Test pathway',esc(alabama()?KG.state+' state standards':(state.pathway||PATHWAYS[0])))}${tdRow(alabama()?KG.state+' standards':'Standards',esc(stds))}${tdRow('Items',n)}${tdRow('Total points',t.marks)}${tdRow('Estimated time','about '+t.minutes+' min')}
+${tdAcc('settings','Settings',settings)}${tdAcc('optional','Optional settings',optional)}${tdAcc('tools','Learner tools',tools)}
+<div class="td-review"><div class="row"><strong>${ready} of ${n} items ready</strong><button class="btn-link small" onclick="state.reviewPanel='all';go('review')">Item review</button></div><div class="meter"><div style="width:${Math.round(ready/n*100)}%"></div></div></div>
+</div></section></div>
+<button class="td-add" onclick="toast('Adding another test is not part of this prototype.')"><span aria-hidden="true">+</span>Add another test</button></div></main>`+bottomBar('Continue','assign','review')};
+ROUTES.details=pageDetails;TITLES.details='Test details';
+
+// Step 4 of 4: the review check now lives here, and the settings list matches the setup pop-up.
+const baseConfirm=pageConfirm;
+pageConfirm=function(){const d=state.details;let h=baseConfirm().replace(/<li><span>Calculator<\/span><strong>[^<]*<\/strong><\/li>/,`<li><span>Answer option order</span><strong>${esc(d.answerOrder)}</strong></li><li><span>Calculator</span><strong>${esc(settingText('calculator'))}</strong></li><li><span>Notes</span><strong>${esc(settingText('notes'))}</strong></li>`).replace(/<li><span>Attempts<\/span><strong>[^<]*<\/strong>/,`<li><span>Attempts</span><strong>${esc(settingText('attempts'))}</strong>`).replace(/<li><span>Time limit<\/span><strong>[^<]*<\/strong>/,`<li><span>Time limit</span><strong>${esc(settingText('timeLimit'))}</strong>`);
+const ack=`<label class="check ack"><input type="checkbox" ${d.ack?'checked':''} onchange="setDetail('ack',this.checked)"> I’ve reviewed the items, answer keys, and any AI-generated content.</label>`;
+const i=h.lastIndexOf('</main>');return h.slice(0,i)+ack+h.slice(i)};
+ROUTES.confirm=pageConfirm;
+
+// ---------------------------------------------------------------------------------------------
+// All tabs (Nov 18 2026 UI/UX update): Tests table, Library, Item banks, Classes, Results and the
+// step 1 item builder. Every authoring feature from the earlier prototype stays in step 1.
+function initials(n){return n.split(' ').map(w=>w[0]).join('').slice(0,2).toUpperCase()}
+function fmtDate(d){return d.toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'})}
+function accordion(group,key,title,body,dflt,cls){const o=(state[group]||{})[key],open=o==null?!!dflt:o;return `<details class="${cls||'td-acc'}" ${open?'open':''} ontoggle="(state['${group}']=state['${group}']||{})['${key}']=this.open;save()"><summary>${title}</summary><div class="td-acc-body">${body}</div></details>`}
+
+// Tests: one table with status filters, Banked included.
+const A_TESTS=[['Algebra basics','Algebra','Grade 8 Mathematics','8.EE.C.7',5,'Draft',1],['Properties of shapes','Geometry','Grade 4 Mathematics','4.G.A.1',8,'Draft',1],['Reading comprehension 2','Reading','Grade 6 English','RI.6.1',4,'Draft',1],['Fractions check 2','Fractions','Grade 5 Mathematics','5.NF.A.1',4,'Draft',1],['Fractions check 1','Fractions','Grade 5 Mathematics','5.NF.A.1',3,'Scheduled',29],['Reading comprehension 1','Reading','Grade 6 English','RI.6.1',3,'Completed',35],['Fractions check (banked)','Fractions','Grade 5 Mathematics','5.NF.A.2',6,'Banked',30],['Main idea and details','Reading','Grade 5 English','RI.5.2',5,'Banked',40]];
+function testRows(){const f=state.ttFilter||'All',q=(state.ttQ||'').toLowerCase(),t=totals(),mine={name:testName(),title:state.title,cls:state.assigned&&state.results?classesOf(state.results.students):`Grade ${state.grade} ${state.subject==='Mathematics'?'Mathematics':'English'}`,stds:[...new Set(state.items.map(it=>stdCode(it.standard)))].join(', ')||stdCode(state.standard),pts:t.marks,status:myStatus(),days:0,mine:true};
+return [mine,...A_TESTS.map(([name,title,cls,stds,pts,status,days])=>({name,title,cls,stds,pts,status,days}))].filter(r=>(f==='All'?r.status!=='Banked':r.status===(f==='Drafts'?'Draft':f))&&(!q||(r.name+' '+r.title+' '+r.cls).toLowerCase().includes(q)))}
+function testTable(){const tone={Draft:'',Scheduled:'info',Completed:'success',Banked:'',['In progress']:'info'};
+return testRows().map(r=>`<tr class="${r.mine?'mine':''}" onclick="openAssessment(${!!r.mine})"><td><span class="tt-name"><span class="tt-icon" aria-hidden="true">▤</span><span><button class="btn-link row-title" onclick="event.stopPropagation();openAssessment(${!!r.mine})">${esc(r.name)}</button>${r.mine?' <span class="chip info">Yours</span>':''}<small>${esc(r.title)}</small></span></span></td><td>${esc(r.cls)}</td><td>${esc(r.stds)}</td><td>${r.pts}</td><td><span class="chip ${tone[r.status]||''}">${r.status}</span></td><td>${fmtDate(dayOffset(-r.days))}</td></tr>`).join('')||'<tr><td colspan="6" class="muted">No tests match.</td></tr>'}
+pageAssessments=function(){const f=state.ttFilter||'All';
+return topbar('assessments')+`<main class="page"><div class="page-head"><div><h1>View your tests</h1></div>${createMenu()}</div>
+<div class="tt-tools"><div class="pills">${['All','Drafts','Scheduled','Completed','Banked'].map(p=>`<button class="pill ${f===p?'on':''}" aria-pressed="${f===p}" onclick="state.ttFilter='${p}';render()">${p}</button>`).join('')}</div><input type="search" class="pill-search" aria-label="Search tests" placeholder="Search tests" value="${esc(state.ttQ||'')}" oninput="state.ttQ=this.value;document.getElementById('tt-rows').innerHTML=testTable()"></div>
+<section class="card flush"><table class="table tt-table"><thead><tr><th>Test</th><th>Class</th><th>Standards</th><th>Points</th><th>Status</th><th>Last updated</th></tr></thead><tbody id="tt-rows">${testTable()}</tbody></table></section></main>`};
+ROUTES.assessments=pageAssessments;TITLES.assessments='Tests';
+
+// Library: Cognia classroom assessments. "Use assessment" starts a new test from the Grade 5 ones.
+const LIB_STATIC={alg:[['Solve: 3x − 7 = 11.',['x = 4/3','x = 6','x = 18','x = 1'],1],['Which equation has no solution?',['2x + 1 = 2x + 3','x + 4 = 2x','3x = 9','x − 2 = 5'],0],['Solve: 4(x + 2) = 20.',['x = 3','x = 4.5','x = 5','x = 7'],0]],
+shapes:[['How many right angles does a rectangle have?',['2','3','4','0'],2],['Which shape has exactly one pair of parallel sides?',['Square','Trapezoid','Rhombus','Rectangle'],1],['A shape has 3 sides and one right angle. What is it?',['Right triangle','Square','Pentagon','Acute triangle'],0]]};
+const LIBRARY=[{id:'frac',title:'Fractions check',grade:5,subject:'Mathematics',std:'5.NF.A.1',bank:['b1','b2','b3','b7','b10']},{id:'alg',title:'Algebra basics',grade:8,subject:'Mathematics',std:'8.EE.C.7'},{id:'read',title:'Reading comprehension',grade:5,subject:'English Language Arts',std:'RI.5.2',bank:['e1','e2','e3','e4']},{id:'shapes',title:'Properties of shapes',grade:4,subject:'Mathematics',std:'4.G.A.1'}];
+function libItems(l){return l.bank?l.bank.map(id=>BANK.find(b=>b.id===id)).filter(Boolean):LIB_STATIC[l.id].map(([stem,choices,correct])=>({type:'mc',stem,choices,correct,marks:1}))}
+function useLibrary(id){const l=LIBRARY.find(x=>x.id===id);if(!l.bank)return toast('This sample can’t be loaded in the prototype. Try Fractions check or Reading comprehension.');
+const keep=state.results;state=defaultState();state.results=keep;if(l.subject!=='Mathematics')switchSubject(ELA.SUBJECT);state.items=[];l.bank.forEach(b=>state.items.push(fromBank(b,state)));state.title=l.title;state.testName=l.title;state.reflections=[];state.mode='manual';
+toast(`${l.title} is ready to edit. Add, remove or change items, then continue.`);go('questions')}
+function pageLibrary(){const q=(state.libQ||'').toLowerCase(),list=LIBRARY.filter(l=>!q||l.title.toLowerCase().includes(q)),l=LIBRARY.find(x=>x.id===state.libSel)||LIBRARY[0],items=libItems(l),pts=items.reduce((s,it)=>s+ +(it.marks||1),0);
+return topbar('library')+`<main class="page"><h1 class="sr-only">Cognia assessment library</h1><div class="lib">
+<section class="lib-list"><div class="row"><strong>Classroom assessments (${LIBRARY.length})</strong></div><input type="search" class="pill-search" aria-label="Search assessments" placeholder="Search assessments" value="${esc(state.libQ||'')}" onchange="state.libQ=this.value;render()">
+${list.map(x=>`<button class="lib-row ${x.id===l.id?'sel':''}" aria-pressed="${x.id===l.id}" onclick="state.libSel='${x.id}';render()"><span class="row"><small class="muted">Grade ${x.grade} ${x.subject==='Mathematics'?'Mathematics':'English'}</small><span class="chip">${plural(libItems(x).length,'item')}</span></span><strong>${esc(x.title)}</strong></button>`).join('')||'<p class="hint">No assessments match.</p>'}</section>
+<section class="lib-detail"><div class="page-head"><div><h2 class="lib-title">${esc(l.title)}</h2><div class="chips"><span class="chip">${esc(l.std)}</span><span class="chip">${plural(items.length,'item')}</span><span class="chip">${plural(pts,'point')}</span></div></div><button class="btn primary" onclick="useLibrary('${l.id}')">Use assessment →</button></div>
+${items.map((it,i)=>`<section class="card lib-item"><div class="row"><span><strong>Item ${i+1}</strong><br><small class="muted">${typeLabel(it)}</small></span><span class="muted small">${plural(+(it.marks||1),'point')}</span></div>${passageNote(it)}<p>${esc(it.stem)}</p>${it.type==='mc'?`<ol class="ib-choices">${it.choices.map((c,k)=>`<li class="${k===it.correct?'correct':''}"><span class="letter">${'ABCD'[k]}</span>${esc(c)}${k===it.correct?'<span class="sr-only">Correct answer</span><span aria-hidden="true" class="ok">✓</span>':''}</li>`).join('')}</ol>`:`<div class="ib-exemplar"><small class="muted">Exemplar response</small><p>${esc(it.exemplar||'')}</p></div>`}</section>`).join('')}</section></div></main>`}
+ROUTES.library=pageLibrary;TITLES.library='Library';
+
+// Item banks: the existing list and detail view, with the UI/UX heading and "Add to test".
+const baseBank=pageBank;
+pageBank=function(){return baseBank().replace('<h1 class="sr-only">Item Bank</h1>','<h1 class="ib-title">Classroom collection, Grades 4 to 8</h1>').replace(/>Add to assessment</g,'>Add to test<')};
+ROUTES.bank=pageBank;
+
+// Classes: class list and a learner performance table. Your Grade 5 classes use the real roster and results.
+const A_CLASSES=[{code:'MATH-5A',name:'Grade 5A',sub:'Mathematics',roster:'Grade 5A',made:13},{code:'MATH-5B',name:'Grade 5B',sub:'Mathematics',roster:'Grade 5B',made:9},{code:'MATH-06',name:'Grade 6 Maths',sub:'Mathematics',made:10,learners:['Aaliyah Johnson','Benjamin Nguyen','Sienna Patel','Tyler Brooks','Hana Sato']},{code:'ELA-05',name:'Grade 5 ELA',sub:'English',made:7,learners:['Marcus Reid','Emily Carter','David Lee','Maria Gonzalez']},{code:'ELA-06',name:'Grade 6 ELA',sub:'English',made:8,learners:['John Robenson','Kathrine Benedict','Jack Alfredo','Priya Shah','Luca Rossi']}];
+function classLearners(c){const r=state.results,d=r&&r.responses?resultsData():null;
+return (c.roster?ROSTER[c.roster]:c.learners.map(name=>({name}))).map(st=>{const h=hashOf(st.name+c.code),acc=c.roster?(state.assign.supports[st.name]||st.supports||[]).length:h%4,mine=d&&d.students.find(s=>s.name===st.name),progress=mine?100:h%7===0?0:[25,42,50,58,67,75,83][h%7],score=mine?mine.pct:progress?30+h%66:null;
+return {name:st.name,profile:st.profile,acc,progress,score,status:score==null?['Not started','']:score>=70?['Advancing','success']:score>=50?['Steady','info']:['Needs attention','warning'],mine:!!mine}})}
+function pageClasses(){const c=A_CLASSES.find(x=>x.code===state.clsSel)||A_CLASSES[0],rows=classLearners(c),need=rows.filter(r=>r.status[0]==='Needs attention').length;
+return topbar('classes')+`<main class="page"><div class="page-head"><div><h1>Classes</h1></div><button class="btn primary" onclick="toast('Creating classes is not part of this prototype.')">+ Create class</button></div><div class="cls">
+<aside class="cls-side">${A_CLASSES.map(x=>{const on=x.code===c.code,n=x.roster?ROSTER[x.roster].length:x.learners.length;return on?`<section class="cls-card on"><header><span><small>${x.code}</small><strong>${esc(x.name)}</strong></span><span class="chip success">Active</span></header><div class="cls-body"><div class="cls-sub">Class details</div><div class="cls-line"><b>${x.made}</b> assessments created</div><div class="cls-line"><b>${n}</b> learners${need?` <span class="chip warning">${need} need attention</span>`:''}</div><div class="cls-line">Educators <span class="avatar sm">SL</span><span class="avatar sm alt">AM</span> <small class="muted">+ 2 more</small></div></div></section>`
+:`<button class="cls-card" onclick="state.clsSel='${x.code}';render()"><span><small>${x.code}</small><strong>${esc(x.name)}</strong><small class="muted">${plural(n,'learner')} | ${x.made} assessments</small></span><span class="chip success">Active</span></button>`}).join('')}</aside>
+<section class="card flush cls-main"><h2 class="cls-h">Learner performance</h2><table class="table"><thead><tr><th>Learners</th><th>Accommodations</th><th>Assessment progress</th><th>Overall score (%)</th><th>Status</th></tr></thead><tbody>${rows.map(r=>`<tr><td><span class="tt-name"><span class="avatar sm">${initials(r.name)}</span><span><strong>${esc(r.name)}</strong>${r.profile?`<small>${esc(r.profile)}</small>`:''}</span></span></td><td><span class="count-badge">${r.acc}</span></td><td class="tcell-bar"><span class="cls-prog">${meter(r.progress)}<small>${r.progress}%</small></span></td><td>${r.score==null?'<span class="muted">No score yet</span>':r.score}${r.mine?' <span class="chip info">From your test</span>':''}</td><td><span class="chip ${r.status[1]}">${r.status[0]}</span></td></tr>`).join('')}</tbody></table>
+<p class="small muted cls-note">${c.roster?'Accommodations come from the supports set in the Assign step. Scores update when you simulate responses for your test.':'Sample class with fictional learners.'}</p></section></div></main>`}
+ROUTES.classes=pageClasses;TITLES.classes='Classes';
+
+// Results: the UI/UX header, learner table, score distribution and side panels on top;
+// learning insights, the misconception views and Learner thinking stay below.
+function resetSession(){const r=state.results;r.responses=null;r.reflect=null;toast('Session reset. Responses were cleared.');render()}
+function resultsTop(){const r=state.results,d=r.responses?resultsData():null,n=r.students.length,total=r.items.reduce((s,it)=>s+ +it.marks,0),classes=classesOf(r.students),stds=[...new Set(r.items.map(it=>stdCode(it.standard)))].join(', ');
+const rows=r.students.map(name=>{const s=d&&d.students.find(x=>x.name===name);return `<tr><td><span class="tt-name"><span class="avatar sm">${initials(name)}</span><strong>${esc(name)}</strong></span></td><td><span class="chip">Private</span></td><td>${s?`${s.earned}/${total}`:'–'}</td><td>${s&&s.miscon.length?s.miscon.map(m=>`<span class="chip warning">${esc(m)}</span>`).join(' '):s?'<span class="muted small">None</span>':'<span class="muted">–</span>'}</td><td><span class="chip ${s?'success':''}">${s?'Scored':'Not started'}</span></td></tr>`}).join('');
+const bands=BANDS.map(([l,lo,hi])=>({l,c:d?d.students.filter(s=>s.pct>=lo&&s.pct<=hi).length:0})),maxBand=Math.max(1,...bands.map(b=>b.c));
+const low=d&&[...d.questions].sort((a,b)=>a.pct-b.pct)[0],top=d&&d.groups.find(g=>g.label!==UNLABELED);
+const perf=d?d.questions.map(q=>`<div class="perf"><button class="btn-link" onclick="openItemResults(${q.qi})">Q${q.qi+1}</button>${meter(q.pct)}<strong>${q.pct}%</strong></div>`).join(''):'<p class="hint">Appears after the first hand-in.</p>';
+const insights=d?`<ul class="checks">${checkLine(d.avg>=70,`${d.avg}% average score`,`Across ${plural(n,'scored student')}.`)}${top?checkLine(false,`${plural(top.students.size,'student')} share a misconception`,esc(top.label)):''}${checkLine(low.pct>=70,`Q${low.qi+1} is the lowest-scoring item`,`${low.pct}% of possible points earned.`)}</ul><button class="btn-link" onclick="setResultsTab('misconceptions');document.getElementById('insights').scrollIntoView({behavior:'smooth'})">Open learning insights →</button>`:'<p class="hint">Appears after the first hand-in.</p>';
+const details=`<ul class="kv"><li><span>Classes</span><strong>${esc(classes)}</strong></li><li><span>Items</span><strong>${r.items.length}</strong></li><li><span>Total points</span><strong>${total}</strong></li><li><span>Standards</span><strong>${esc(stds)}</strong></li><li><span>Session date</span><strong>${esc(r.date||'')}</strong></li><li><span>Version</span><strong>Version 1</strong></li></ul>`;
+return `<div class="rs-head"><div><small class="muted">Grade ${esc(state.grade)} ${esc(state.subject)}</small><h1>${esc(r.title)} <span class="muted" aria-hidden="true">⌄</span></h1></div><div class="rs-meta">${d?`<span class="chip ${d.avg>=70?'success':'warning'}">${d.avg}% Average score</span>`:''}<small class="muted">${d?n:0}/${n} learners submitted</small>${alabama()?`<span class="chip info">${KG.state} state standards</span>`:''}${d?'<span class="chip warning">Simulated responses</span>':''}</div></div>
+<div class="rs-layout"><section class="card flush"><p class="small muted rs-count">${plural(n,'learner')}</p><table class="table"><thead><tr><th>Learners</th><th>Feedback</th><th>Score</th><th>Misconceptions shown</th><th>Status</th></tr></thead><tbody>${rows}</tbody></table>
+${d?'':`<div class="rs-wait"><div><strong>Waiting for learners to join</strong><p class="muted small">In the product, results fill in as learners hand in. For this demo, simulate a class set of responses.</p></div><button class="btn primary" onclick="simulate()">Simulate learner responses</button></div>`}</section>
+<aside class="rs-side"><section class="card"><h2 class="rs-h">Score distribution</h2><div class="histogram">${bands.map(b=>`<div><span>${b.c}</span><i style="height:${b.c/maxBand*100}%"></i><small>${b.l}</small></div>`).join('')}</div></section>
+${accordion('rsOpen','perf','Performance by item',perf,true,'card rs-acc')}${accordion('rsOpen','insights','Key insights',insights,false,'card rs-acc')}${accordion('rsOpen','details','Test details',details,false,'card rs-acc')}
+<section class="card rs-live"><h2 class="rs-h">Live session</h2><div class="row"><span class="muted small">Learners join at cognia.org/join</span><button class="btn sm" onclick="toast('Join link copied (prototype).')">Copy link</button></div><div class="row"><span class="muted small">Session code</span><strong>MATH-27</strong></div>${d?'<button class="btn-link danger-link" onclick="resetSession()">Reset session</button>':''}</section></aside></div>`}
+const baseResults=pageResults;
+pageResults=function(){const r=state.results,html=baseResults();if(!r)return html;const top=resultsTop();
+if(!r.responses){const a=html.indexOf('<main class="page">')+19;return html.slice(0,a)+top+'</main>'}
+const a=html.indexOf('<div class="page-head">'),b=html.indexOf('<section id="insights"');return html.slice(0,a)+top+html.slice(b)};
+ROUTES.results=pageResults;
+
+// Step 1, Add your items: Use item banks or Create manually, with your items listed on the right.
+function a1Mode(m){if(m==='ai')return setMode('ai');state.mode=m;state.justAdded=null;render()}
+function iaSummary(it){const a=IA.analyze(it,{grade:+state.grade}),sc=a.checks.filter(c=>c.status!=='info'),p=sc.filter(c=>c.status==='pass').length,w=sc.length-p;return it.stem.trim()?`${p} of ${sc.length} checks passed${w?` · <span class="warn-text">${plural(w,'suggestion')}</span>`:''}<span class="meter"><span style="width:${sc.length?Math.round(p/sc.length*100):0}%"></span></span>`:'Write an item to see how it measures up.'}
+function a1Acc(key,title,sub,body,dflt){const o=(state.a1Open||{})[key],open=key==='supports'&&state.draftTab==='supports'?true:o==null?dflt:o;
+return `<details class="a1-row" ${open?'open':''} ontoggle="(state.a1Open=state.a1Open||{})['${key}']=this.open;${key==='supports'?"if(!this.open)state.draftTab='write';":''}save()"><summary><span><strong>${title}</strong><small ${key==='analysis'?'id="ia-summary"':''}>${sub}</small></span></summary><div class="a1-row-body">${body}</div></details>`}
+function manualEditor(){if(justAddedItem())return addedCard();const it=state.draft,n=supportCount(it);
+return `${passageField(it)}<div class="a1-fields"><div><label for="f-type">Item type</label><select id="f-type" onchange="setField('type',this.value,true)">${opt('mc','Multiple choice',it.type)}${opt('cr','Constructed response',it.type)}</select></div>
+<div><label for="f-std">${alabama()?KG.state+' standard':'Standard'}</label><select id="f-std" onchange="setField('standard',this.value,true)">${writable().map(k=>opt(k,stdName(k),it.standard)).join('')}</select></div>
+<div><label for="f-dok">Depth of Knowledge (DOK)</label><select id="f-dok" onchange="setField('dok',this.value,true)">${[1,2,3].map(d=>opt(d,'DOK '+d,it.dok)).join('')}</select></div>
+<div><label id="f-marks-l">Total points</label><div class="num-step" role="group" aria-labelledby="f-marks-l"><button type="button" aria-label="Fewer points" ${it.marks<=1?'disabled':''} onclick="setField('marks',${Math.max(1,it.marks-1)},true)">−</button><span>${it.marks}</span><button type="button" aria-label="More points" ${it.marks>=5?'disabled':''} onclick="setField('marks',${Math.min(5,it.marks+1)},true)">+</button></div></div></div>
+<p class="hint">${esc(stdText(it.standard))}</p>
+<section class="a1-box"><div class="row"><label for="f-stem">Item</label><div class="row-actions"><button class="btn-link small" onclick="newDraft('sample')">Load sample</button><button class="btn-link small" onclick="newDraft('blank')">Start blank</button></div></div>
+<textarea id="f-stem" rows="4" oninput="setField('stem',this.value)" placeholder="Write the item learners will answer">${esc(it.stem)}</textarea>
+${a1Acc('analysis','Item analysis',iaSummary(it),`<div id="side-panel" aria-live="polite">${analysisPanel(it)}</div>`,true)}
+${a1Acc('supports','Learner supports',n?`${plural(n,'support')} on`:'Same item, different ways in',supportsTab(it),false)}
+${a1Acc('preview','Learner preview','Standard and supported versions side by side',previewTab(it),false)}</section>
+<div id="components-field">${componentsField(it)}</div>
+${it.type==='mc'?`<label>Answer options</label><p class="hint">Select the correct answer. For each wrong answer, name the misconception it reveals.</p>${it.choices.map((c,i)=>choiceRow(it,c,i)).join('')}`
+:`<label for="f-ex">Exemplar response</label><textarea id="f-ex" rows="4" oninput="setField('exemplar',this.value)" placeholder="What does a complete, correct response include?">${esc(it.exemplar)}</textarea>${rubricField(it)}`}
+<div class="actions a1-actions"><button class="btn-link" onclick="newDraft('blank')">Cancel</button><button class="btn primary" onclick="addDraft()">Add to test</button></div>`}
+function bankPicker(){const f=state.bankFilter,q=f.q.toLowerCase(),rows=BANK.filter(b=>inSubject(b)&&(f.standard==='all'||b.standard===f.standard)&&(f.type==='all'||b.type===f.type)&&(!q||b.stem.toLowerCase().includes(q)));
+return `<div class="a1-search"><input type="search" class="pill-search" aria-label="Search item banks" placeholder="Search item banks / collections" value="${esc(f.q)}" onchange="setBankFilter('q',this.value)"><select aria-label="Standard" onchange="setBankFilter('standard',this.value)">${opt('all','All standards',f.standard)}${[...new Set(BANK.filter(inSubject).map(b=>b.standard))].map(s=>opt(s,stdCode(s),f.standard)).join('')}</select><select aria-label="Item type" onchange="setBankFilter('type',this.value)">${opt('all','All types',f.type)}${opt('mc','Multiple choice',f.type)}${opt('cr','Constructed response',f.type)}</select></div>
+<p class="small muted a1-count">${plural(rows.length,'item')} <span class="chip">Classroom collection, Grades 4 to 8</span>${alabama()?` <span class="chip info">${KG.state} standards</span>`:''}</p>
+${rows.map(b=>{const added=state.items.some(it=>it.bankId===b.id);return `<div class="a1-bank"><div><div class="chips"><span class="chip">${typeLabel(b)}</span><span class="chip dok${b.dok}">DOK ${b.dok}</span><span class="chip">${stdCode(b.standard)}</span>${STANDARDS[b.standard]&&STANDARDS[b.standard].grade<+state.grade?'<span class="chip info">Prerequisite</span>':''}</div><p>${esc(b.stem)}</p>${passageNote(b)}</div><button class="btn sm ${added?'':'primary'}" ${added?'disabled':''} aria-label="${added?'Added':'Add item'}: ${esc(b.stem.slice(0,60))}" onclick="addBank('${b.id}')">${added?'✓ Added':'+ Add'}</button></div>`}).join('')||'<p class="hint">No items match. Try another search.</p>'}`}
+function testList(){const n=state.items.length;
+return `<section class="a1-list"><div class="row"><span class="small muted">${n?plural(n,'item')+' added':'No items yet'}</span>${n?'<button class="btn-link small" onclick="clearItems()">Clear all</button>':''}</div>
+${n?state.items.map((it,i)=>`<div class="a1-item"><span class="qnum">${i+1}</span><div><div class="chips"><span class="chip">${typeLabel(it)}</span><span class="chip dok${it.dok}">DOK ${it.dok}</span>${statusChip(it)}</div><p>${esc(it.stem)}</p>${passageNote(it)}</div><div class="a1-item-actions"><button class="icon-btn" aria-label="Move item ${i+1} up" ${i?'':'disabled'} onclick="moveItem(${i},-1)">↑</button><button class="icon-btn" aria-label="Move item ${i+1} down" ${i<n-1?'':'disabled'} onclick="moveItem(${i},1)">↓</button><button class="icon-btn" aria-label="Edit item ${i+1} in Review" onclick="state.reviewSel=${i};go('review')">✎</button><button class="icon-btn" aria-label="Remove item ${i+1}" onclick="removeItem(${i})">×</button></div></div>`).join('')
+:'<div class="a1-empty"><span aria-hidden="true">▤</span><strong>Build your test</strong><p class="small muted">Find an item in the item banks and choose + Add, or create your own. You can reorder items here.</p></div>'}</section>`}
+pageQuestions=function(){const bank=state.mode==='bank';
+return topbar('assessments')+`<main class="page">${pageHead(0,'Create your items')}
+<div class="mode-pills" role="group" aria-label="Choose how to add items"><button class="pill ${bank?'on':''}" aria-pressed="${bank}" onclick="a1Mode('bank')">Use item banks</button><button class="pill ${bank?'':'on'}" aria-pressed="${!bank}" onclick="a1Mode('manual')">Create manually</button><button class="pill" onclick="a1Mode('ai')">✦ Generate with AI <span class="chip plus">Classroom+</span></button></div>
+<div class="a1-grid"><div class="a1-main">${bank?bankPicker():manualEditor()}</div><aside class="a1-side">${testList()}${bank?'':cogniaSuggestions(justAddedItem()||state.draft)}</aside></div></main>`+bottomBar('Continue','review','setup')};
+ROUTES.questions=pageQuestions;
+const baseRefreshA=refresh;
+refresh=function(){baseRefreshA();const el=document.getElementById('ia-summary');if(el&&route()==='questions')el.innerHTML=iaSummary(state.draft)};
 
 </script>
 <script>
